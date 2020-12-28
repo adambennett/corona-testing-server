@@ -12,12 +12,12 @@ import {PatientModule} from "./entities/patient/patient.module";
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: env.DB_HOST,
-      port: env.DB_PORT,
+      port: parseInt(env.DB_PORT),
       username: env.DB_USER,
       password: env.DB_PASS,
       database: env.DB_NAME,
       entities: [Patient],
-      synchronize: env.DB_SYNC,
+      synchronize: env.DB_SYNC === 'true',
     }),
     PatientModule
   ],
