@@ -21,6 +21,10 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "rimraf": "./node_modules/rimraf/bin.js"
   },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+  },
   "dependencies": {
     "@nestjs/cli": "^7.5.4",
     "@nestjs/common": "^7.5.1",
